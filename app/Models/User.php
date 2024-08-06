@@ -43,8 +43,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function teams(): BelongsToMany {
-        return $this->belongsToMany(Team::class, 'team_user');
-    }
 }

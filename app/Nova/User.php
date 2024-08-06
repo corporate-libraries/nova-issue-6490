@@ -64,8 +64,6 @@ class User extends Resource
                 ->creationRules('required', Rules\Password::defaults())
                 ->updateRules('nullable', Rules\Password::defaults()),
 
-            BelongsToMany::make('teams', 'teams', Team::class)
-
         ];
     }
 
